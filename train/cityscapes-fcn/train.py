@@ -12,11 +12,11 @@ from torch.backends import cudnn
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data import DataLoader
 
-from ..utils import joint_transforms
-from ..utils import transforms as extended_transforms
-from ..datasets import cityscapes
-from ..models import *
-from ..utils import check_mkdir, evaluate, AverageMeter, CrossEntropyLoss2d
+from utils import joint_transforms
+from utils import transforms as extended_transforms
+from datasets import cityscapes
+from models import *
+from utils import check_mkdir, evaluate, AverageMeter, CrossEntropyLoss2d
 
 cudnn.benchmark = True
 
