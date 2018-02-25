@@ -5,7 +5,7 @@ import sys
 sys.path.insert(1, '.')
 import torchvision.transforms as standard_transforms
 import torchvision.utils as vutils
-from tensorboard import SummaryWriter
+import tensorflow as tf
 from torch import optim
 from torch.autograd import Variable
 from torch.backends import cudnn
@@ -21,7 +21,7 @@ cudnn.benchmark = True
 
 ckpt_path = '../../ckpt'
 exp_name = 'voc-fcn8s'
-writer = SummaryWriter(os.path.join(ckpt_path, 'exp', exp_name))
+writer = tf.summary.FileWriter(os.path.join(ckpt_path, 'exp', exp_name))
 
 args = {
     'epoch_num': 300,
