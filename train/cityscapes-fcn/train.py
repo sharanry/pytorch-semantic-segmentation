@@ -1,7 +1,8 @@
 import datetime
 import os
 import random
-
+import sys
+sys.path.insert(1, '.')
 import numpy as np
 import torchvision.transforms as standard_transforms
 import torchvision.utils as vutils
@@ -11,7 +12,7 @@ from torch.autograd import Variable
 from torch.backends import cudnn
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data import DataLoader
-
+print(sys.path)
 from utils import joint_transforms
 from utils import transforms as extended_transforms
 from datasets import cityscapes
