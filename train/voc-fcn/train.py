@@ -122,7 +122,7 @@ def train(train_loader, net, criterion, optimizer, epoch, train_args):
         train_loss.update(loss.data[0], N)
 
         curr_iter += 1
-        writer.add_scalar('train_loss', train_loss.avg, curr_iter)
+        writer.scalar('train_loss', train_loss.avg)
 
         if (i + 1) % train_args['print_freq'] == 0:
             print('[epoch %d], [iter %d / %d], [train loss %.5f]' % (
@@ -200,12 +200,12 @@ def validate(val_loader, net, criterion, optimizer, epoch, train_args, restore, 
 
     print('--------------------------------------------------------------------')
 
-    writer.add_scalar('val_loss', val_loss.avg, epoch)
-    writer.add_scalar('acc', acc, epoch)
-    writer.add_scalar('acc_cls', acc_cls, epoch)
-    writer.add_scalar('mean_iu', mean_iu, epoch)
-    writer.add_scalar('fwavacc', fwavacc, epoch)
-    writer.add_scalar('lr', optimizer.param_groups[1]['lr'], epoch)
+    writer.scalar('val_loss', val_loss.avg)
+    writer.scalar('acc', acc)
+    writer.scalar('acc_cls', acc_cls)
+    writer.scalar('mean_iu', mean_iu)
+    writer.scalar('fwavacc', fwavacc)
+    writer.scalar('lr', optimizer.param_groups[1]['lr'])
 
     net.train()
     return val_loss.avg
