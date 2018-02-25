@@ -3,7 +3,7 @@ from torch import nn
 from torchvision import models
 
 from utils import initialize_weights
-from config import vgg19_bn_path
+from .config import vgg19_bn_path
 
 
 class _DecoderBlock(nn.Module):
