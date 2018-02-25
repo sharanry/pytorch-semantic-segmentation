@@ -3,7 +3,7 @@ from torch import nn
 from torchvision import models
 
 from utils import get_upsampling_weight
-from config import vgg16_caffe_path
+from models.config import vgg16_caffe_path
 
 
 class FCN16VGG(nn.Module):
