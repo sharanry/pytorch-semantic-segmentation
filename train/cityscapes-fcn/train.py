@@ -12,8 +12,8 @@ from torch.backends import cudnn
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data import DataLoader
 
-import utils.joint_transforms as joint_transforms
-import utils.transforms as extended_transforms
+from utils import joint_transforms
+from utils import transforms as extended_transforms
 from datasets import cityscapes
 from models import *
 from utils import check_mkdir, evaluate, AverageMeter, CrossEntropyLoss2d
