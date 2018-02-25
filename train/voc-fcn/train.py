@@ -1,7 +1,8 @@
 import datetime
 import os
 import random
-
+import sys
+sys.path.insert(1, '.')
 import torchvision.transforms as standard_transforms
 import torchvision.utils as vutils
 from tensorboard import SummaryWriter
